@@ -20,7 +20,16 @@
   padding-top: 30vh;
   font-family: "Aristotelica Display Trial", sans-serif;
 }
-
+.portada {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.portada .videoBG {
+  min-width: 100%;
+  min-height: 100%;
+}
 .txt {
   color: white;
   font-size: 4.5vw;
@@ -61,6 +70,10 @@
   background-position-x: -1.2vw;
   background-color: rgba(255, 255, 255, 0.1);
   animation: wave 5s ease-in-out infinite;
+  transition: all 0.15s ease-out;
+}
+.shape:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*ANIMATIONS*/
