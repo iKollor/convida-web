@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Aristotelica Display Trial";
+  src: url("https://www.dafontfree.net/data/100/a/170471/Aristotelica-Display-Fat-trial.ttf")
+      format("woff"),
+    url("https://www.dafontfree.net/data/100/a/170471/Aristotelica-Display-Fat-trial.ttf")
+      format("opentype"),
+    url("https://www.dafontfree.net/data/100/a/170471/Aristotelica-Display-Fat-trial.ttf")
+      format("truetype");
+}
+
+.section1 {
+  background-size: cover;
+  background-image: url(../public/SVG/BG_Mesa\ de\ trabajo\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 10%;
+  padding-top: 30vh;
+  font-family: "Aristotelica Display Trial", sans-serif;
+}
+
+.txt {
+  color: white;
+  font-size: 4.5vw;
+  cursor: default;
+}
+.txt .cooperacion {
+  opacity: 0;
+  animation: transitionInXlft 1.3s ease-out;
+  animation-fill-mode: forwards;
+}
+.txt .integracion {
+  opacity: 0;
+  font-size: 1.628em;
+  animation: transitionInXlft 1.3s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.txt .solidaridad {
+  opacity: 0;
+  font-size: 1.65em;
+  animation: transitionInXlft 1.3s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+.personas {
+  opacity: 0;
+  animation: transitionInXrght 1.3s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+.shape {
+  margin-left: 5vw;
+  width: 35vw;
+  height: 25vw;
+  background: url(../public/SVG/Recurso\ 4.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: -1.2vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: wave 5s ease-in-out infinite;
+}
+
+/*ANIMATIONS*/
+
+@keyframes transitionInXlft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes transitionInXrght {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+  }
+
+  50% {
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 50px;
+}
+
+.wave .shape-fill {
+  fill: #ffffff;
+}
