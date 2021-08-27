@@ -16,7 +16,6 @@ header {
 }
 .sticky .logo {
   transition: 0.2s;
-  margin-top: 1vh;
 }
 .sticky nav {
   transition: 0.2s;
@@ -30,13 +29,7 @@ header {
   color: #823c84;
 }
 .sticky ul li a:hover {
-  /*color: #4b89c7;*/
-  background: #fff;
-  background: linear-gradient(90deg, #823c84 0, #4b89c7 50%, #823c84 100%);
-  background-size: 15vw;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: gradientMove 20s linear infinite;
+  color: #4b89c7;
 }
 @keyframes gradientMove {
   0% {
@@ -55,6 +48,7 @@ header {
   background: linear-gradient(90deg, #823c84 0, #4b89c7 50%, #823c84 100%);
   background-size: 15vw;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+  animation: gradientMove 20s linear infinite;
 }
 
 nav {
@@ -63,11 +57,11 @@ nav {
   width: 80%;
   display: inline-flex;
   transition: 0.2s;
+  align-items: center;
 }
 .logo {
   transition: 0.2s;
   padding: 0 1px;
-  margin-top: 2.7vh;
   width: 200px;
 }
 nav ul {
@@ -109,10 +103,7 @@ nav ul li a:not(.tienda):hover::after {
   transform-origin: left;
 }
 .sticky nav ul li a:not(.tienda)::after {
-  background: linear-gradient(90deg, #823c84 0, #4b89c7 50%, #823c84 100%);
-}
-.sticky nav ul li a:not(.tienda):hover::after {
-  animation: gradientMove 20s linear infinite;
+  background: currentColor;
 }
 
 .tienda {
@@ -172,21 +163,19 @@ nav ul li a:not(.tienda):hover::after {
   .sticky {
     height: 15vh;
   }
-  .sticky .logo {
-    margin-top: 2.7vh;
-  }
+
   .sticky .checkbtn {
     color: #823c84;
   }
-
+  .tiendacontainer {
+    right: 0;
+    margin-right: 20vw;
+  }
   .logo {
     z-index: 2;
     width: 30vw;
   }
-  .tiendacontainer {
-    position: unset;
-    padding-top: 0px;
-  }
+
   li {
     line-height: 5vh;
   }
@@ -209,7 +198,7 @@ nav ul li a:not(.tienda):hover::after {
     background: rgba(59, 59, 59, 1);
   }
 
-  ul {
+  .navcontainer ul {
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -226,11 +215,8 @@ nav ul li a:not(.tienda):hover::after {
   }
   .tienda {
     font-size: 3vw;
-    line-height: 15vh;
   }
-  .tiendacontainer {
-    transform: translateY(-5px);
-  }
+
   nav ul li a {
     font-size: 30px;
   }
