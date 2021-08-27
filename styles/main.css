@@ -8,6 +8,11 @@
       format("truetype");
 }
 
+:root {
+  --morado: #823c84;
+  --celeste: #4b89c7;
+}
+
 .section1 {
   background-size: cover;
   background-image: url(../public/SVG/BG_Mesa\ de\ trabajo\ 1.svg);
@@ -17,8 +22,9 @@
   height: 100vh;
   display: flex;
   padding: 10%;
-  padding-top: 30vh;
   font-family: "Aristotelica Display Trial", sans-serif;
+  justify-content: space-between;
+  align-items: center;
 }
 .portada {
   position: absolute;
@@ -34,12 +40,14 @@
   color: white;
   font-size: 4.5vw;
   cursor: default;
+  text-align: center;
 }
 .txt .cooperacion {
   opacity: 0;
   animation: transitionInXlft 1.3s ease-out;
   animation-fill-mode: forwards;
 }
+
 .txt .integracion {
   opacity: 0;
   font-size: 1.628em;
@@ -47,6 +55,7 @@
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
+
 .txt .solidaridad {
   opacity: 0;
   font-size: 1.65em;
@@ -54,6 +63,7 @@
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
+
 .personas {
   opacity: 0;
   animation: transitionInXrght 1.3s ease-out;
@@ -132,4 +142,52 @@
 
 .wave .shape-fill {
   fill: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .section1 {
+    height: 70vh;
+  }
+  .portada {
+    height: 70vh;
+  }
+  .wave {
+    bottom: 28vh;
+  }
+}
+/*---------------Section 2---------------------*/
+
+.section2 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding-top: 10vh;
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  font-size: 100%;
+  align-items: center;
+}
+.section2 .der {
+  max-width: 25vw;
+}
+.section2 h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.section2 p {
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.section2 .der h1 {
+  color: var(--morado);
+}
+.section2 .der p {
+  color: var(--celeste);
+}
+
+.section2 img {
+  width: 40vw;
 }
