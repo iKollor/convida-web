@@ -1,9 +1,12 @@
 @font-face {
-  font-family: "Aristotelica";
-  src: url("https://www.dafontfree.net/data/100/a/170471/Aristotelica-Display-Fat-trial.ttf")
-      format("woff"),
-    url("https://www.dafontfree.net/data/100/a/170471/Aristotelica-Display-Fat-trial.ttf")
-      format("opentype"),
-    url("https://www.dafontfree.net/data/100/a/170471/Aristotelica-Display-Fat-trial.ttf")
-      format("truetype");
+  font-family: "Aristotelica-Display-Trial-Bold";
+  src: url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.woff"),
+    format("woff"),
+    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.svg#Aristotelica-Display-Trial-Bold")
+      format("svg"),
+    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.eot"),
+    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }

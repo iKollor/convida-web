@@ -46,9 +46,9 @@ header {
 .sticky .tienda:hover {
   -webkit-text-fill-color: white;
   background: linear-gradient(90deg, #823c84 0, #4b89c7 50%, #823c84 100%);
-  background-size: 15vw;
+  background-size: 700px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
-  animation: gradientMove 20s linear infinite;
+  animation: gradientMove 10s linear infinite;
 }
 
 nav {
@@ -74,7 +74,12 @@ nav ul li {
   line-height: 150px;
   margin: 0 10px;
 }
-
+#hr {
+  display: none;
+}
+#tienda {
+  display: none;
+}
 nav ul li a {
   color: rgba(255, 255, 255, 0.7);
   font-size: 17px;
@@ -101,6 +106,7 @@ nav ul li a:not(.tienda):after {
 nav ul li a:not(.tienda):hover::after {
   transform: scaleX(1);
   transform-origin: left;
+  background: currentColor;
 }
 .sticky nav ul li a:not(.tienda)::after {
   background: currentColor;
@@ -152,7 +158,6 @@ nav ul li a:not(.tienda):hover::after {
   font-size: 30px;
   color: white;
   float: right;
-  line-height: 150px;
   cursor: pointer;
   display: none;
 }
@@ -173,7 +178,6 @@ nav ul li a:not(.tienda):hover::after {
     margin-right: 20vw;
   }
   .logo {
-    z-index: 2;
     width: 30vw;
   }
 
@@ -184,7 +188,6 @@ nav ul li a:not(.tienda):hover::after {
     z-index: 1;
     display: block;
     font-size: 5vw;
-    line-height: 14vh;
   }
 
   nav {
@@ -196,20 +199,27 @@ nav ul li a:not(.tienda):hover::after {
     margin-right: 0px;
   }
   .navcontainer ul {
-    background: rgba(59, 59, 59, 1);
+    background: rgb(255, 255, 255);
   }
 
   .navcontainer ul {
     z-index: 1;
     position: fixed;
-    width: 100%;
+    width: 60%;
     height: 100%;
-    left: 100%;
+    right: -100%;
     top: 0;
-    padding-top: 150px;
+    padding-top: 15vh;
     text-align: center;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-box-shadow: -15px 0px 28px -5px rgba(0, 0, 0, 0.43);
+    box-shadow: -15px 0px 28px -5px rgba(0, 0, 0, 0.43);
+    padding-left: 20px;
+    padding-right: 20px;
   }
+
   nav ul li {
     display: block;
     line-height: 15vh;
@@ -219,10 +229,36 @@ nav ul li a:not(.tienda):hover::after {
   }
 
   nav ul li a {
-    font-size: 30px;
+    color: var(--morado);
+    font-size: 4vw;
+  }
+  nav ul li a:not(.tienda):hover {
+    color: var(--celeste);
+  }
+  .oscuro {
+    position: absolute;
+    width: 100%;
+    height: 10000px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   #check:checked ~ .navcontainer ul {
-    left: 0;
+    right: 0;
+  }
+  #hr {
+    display: block;
+  }
+  #tienda {
+    color: white;
+    background: #823c84;
+    display: initial;
+  }
+  #tienda:hover {
+    -webkit-text-fill-color: white;
+    background: linear-gradient(90deg, #823c84 0, #4b89c7 50%, #823c84 100%);
+    background-size: 700px;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+    animation: gradientMove 10s linear infinite;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 332px) {
