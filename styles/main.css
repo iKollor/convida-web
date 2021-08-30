@@ -25,6 +25,7 @@
   font-family: "Aristotelica Display Trial", sans-serif;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20vh;
 }
 .portada {
   position: absolute;
@@ -172,13 +173,13 @@
   max-width: 25vw;
 }
 .section2 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   text-transform: uppercase;
   font-weight: 800;
 }
-.section2 p {
-  margin-top: 30px;
+.section2 p {  
   font-weight: 400;
+  opacity: 0.5;
 }
 
 .section2 .der h1 {
@@ -190,4 +191,16 @@
 
 .section2 img {
   width: 40vw;
+}
+@media (max-width: 900px){
+  .section2{
+    justify-content: center;
+  }
+  .section2 img{
+    width: 70vw;
+  }
+  .section2 .der{
+    max-width: none;
+    text-align: center;
+  }
 }
