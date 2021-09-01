@@ -31,7 +31,6 @@ ischecked.onclick = function () {
     close.style.color = "var(--morado)";
     close.style.display = "";
     oscuro.style.display = "";
-    logonav.style.display = "";
     if (window.scrollY > 200) {
       img.style.display = "none";
     }
@@ -44,7 +43,6 @@ ischecked.onclick = function () {
     menu.style.display = "";
     close.style.display = "none";
     oscuro.style.display = "none";
-    logonav.style.display = "none";
     if (window.scrollY > 0) {
       img.src = "../public/SVG/logo-color.svg";
     }
