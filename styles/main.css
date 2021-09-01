@@ -17,10 +17,6 @@
 }
 
 .section1 {
-  background-image: url(../public/SVG/BG_Mesa\ de\ trabajo\ 1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -37,9 +33,11 @@
   overflow: hidden;
 }
 .portada .videoBG {
+  object-fit: cover;
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 .txt {
   color: white;
@@ -180,40 +178,59 @@
   width: 100%;
   max-width: 70%;
   margin: auto;
-  font-size: 100%;
+  font-size: 1.3em;
   align-items: center;
 }
 .section2 .der {
   max-width: 25vw;
+  text-align: right;
 }
-.section2 h1 {
+.section2 h1,
+.section3 h1 {
   font-size: 3.5em;
   text-transform: uppercase;
   font-weight: 800;
-}
-.section2 p {
-  font-weight: 400;
-  opacity: 0.5;
-}
-
-.section2 .der h1 {
   color: var(--morado);
 }
-.section2 .der p {
+.section2 p,
+.section3 p {
+  font-weight: 400;
+  opacity: 0.5;
   color: var(--celeste);
 }
-
-.section2 img {
+img {
   width: 40vw;
 }
+
+.section3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10vh;
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  font-size: 1.3em;
+  align-items: center;
+}
+
+.section3 .izq {
+  max-width: 25vw;
+  text-align: left;
+}
+
 @media (max-width: 900px) {
-  .section2 {
+  .section2,
+  .section3 {
     justify-content: center;
+    font-size: 0.8em;
   }
-  .section2 img {
+  .section2 img,
+  .section3 img {
     width: 70vw;
   }
-  .section2 .der {
+  .section2 .der,
+  .section3 .izq {
     max-width: none;
     text-align: center;
   }

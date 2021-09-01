@@ -16,9 +16,23 @@
   </head>
   <body id="body">
     <div id="header"></div>
+    <script>
+      $(document).ready(function () {
+        $("#videoBG").bind("contextmenu", function () {
+          return false;
+        });
+      });
+    </script>
     <main>
       <div class="portada">
-        <video class="videoBG" muted="muted" autoplay loop>
+        <video
+          class="videoBG"
+          id="videoBG"
+          onloadedmetadata="this.muted=true"
+          autoplay
+          muted
+          loop
+        >
           <source src="public/videos/bg.mp4" type="video/mp4" />
         </video>
       </div>
@@ -69,6 +83,20 @@
         </div>
         <div class="izq">
           <img src="/public/SVG/Startup_Two Color.svg" alt="" />
+        </div>
+      </section>
+      <section class="section3">
+        <div class="der">
+          <img src="/public/SVG/Startup_Two Color.svg" alt="" />
+        </div>
+        <div class="izq">
+          <h1>Lorem ipsum</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nulla,
+            aliquam deserunt quidem enim tempora facere totam dolor. Rem tempora
+            repudiandae voluptate fugit aliquid. Iste neque libero cumque
+            aperiam ut?
+          </p>
         </div>
       </section>
     </main>
