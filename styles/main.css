@@ -17,6 +17,8 @@
   overflow: hidden;
 }
 .portada .videoBG {
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   overflow: hidden;
   pointer-events: none;
@@ -91,8 +93,6 @@
   .portada .videoBG {
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    transform: translateY(-50vh);
-    -webkit-transform: translateY(-50vh);
   }
   .shape:hover {
     background-position-x: -3vw;
