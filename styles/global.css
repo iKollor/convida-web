@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url(footer.css);
-@import url(header.css);
-@import url(main.css);
 @import url(aristotelica.css);
+@font-face {
+  font-family: "Aristotelica-Display-Trial-Bold";
+  src: url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.woff")
+      format("woff"),
+    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.svg#Aristotelica-Display-Trial-Bold")
+      format("svg"),
+    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.eot"),
+    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --morado: #823c84;
+  --celeste: #4b89c7;
+}
 * {
   padding: 0;
   margin: 0;
@@ -16,4 +29,25 @@ body {
 }
 h1 {
   font-family: "Aristotelica-Display-Trial-Bold", sans-serif;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 50px;
+}
+
+.wave .shape-fill {
+  fill: #ffffff;
 }

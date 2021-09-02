@@ -1,3 +1,4 @@
+@import url(global.css);
 footer {
   background-color: white;
   width: 100%;
@@ -25,27 +26,32 @@ footer {
 .boxFooter .terms {
   max-width: 350px;
   margin-top: 20px;
-  color: #929292;
+  color: var(--celeste);
+  opacity: 0.7;
   font-size: 1.1em;
   margin-bottom: 50px;
+  transition: opacity 150ms ease-in;
 }
-
+.boxFooter .terms:hover {
+  opacity: 1;
+}
 .boxFooter h2 {
-  color: #585858;
+  color: var(--morado);
   font-weight: 700;
   margin-bottom: 30px;
 }
 
 .boxFooter a {
   margin-bottom: 20px;
-  color: #929292;
+  color: var(--celeste);
   font-weight: 500;
+  opacity: 0.7;
   position: relative;
   transition: opacity 80ms ease-in;
 }
 
 .boxFooter a:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .boxCopyright {

@@ -1,20 +1,4 @@
-@font-face {
-  font-family: "Aristotelica-Display-Trial-Bold";
-  src: url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.woff")
-      format("woff"),
-    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.svg#Aristotelica-Display-Trial-Bold")
-      format("svg"),
-    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.eot"),
-    url("../public/fonts/Aristotelica-Display-Trial-Bold.ttf.eot?#iefix")
-      format("embedded-opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-:root {
-  --morado: #823c84;
-  --celeste: #4b89c7;
-}
+@import url(global.css);
 
 .section1 {
   width: 100%;
@@ -148,35 +132,14 @@
   }
 }
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.wave svg {
-  position: relative;
-  display: block;
-  width: calc(130% + 1.3px);
-  height: 50px;
-}
-
-.wave .shape-fill {
-  fill: #ffffff;
-}
-
-/*---------------Section 2---------------------*/
+/*---------------Sections---------------------*/
 
 .section2 {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
-  padding-top: 10vh;
   width: 100%;
+  height: 90vh;
   max-width: 70%;
   margin: auto;
   font-size: 1.3em;
@@ -189,16 +152,20 @@
 .section2 h1,
 .section3 h1 {
   font-size: 3.5em;
-  text-transform: uppercase;
-  font-weight: 800;
   color: var(--morado);
 }
 .section2 p,
 .section3 p {
   font-weight: 400;
-  opacity: 0.5;
+  opacity: 0.7;
   color: var(--celeste);
+  transition: opacity 150ms ease-in;
 }
+.section2 p:hover,
+.section3 p:hover {
+  opacity: 1;
+}
+
 img {
   width: 40vw;
 }
@@ -207,8 +174,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 10vh;
   width: 100%;
+  height: 90vh;
   max-width: 70%;
   margin: auto;
   font-size: 1.3em;

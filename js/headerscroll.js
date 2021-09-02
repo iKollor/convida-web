@@ -10,9 +10,9 @@ var logonav = document.getElementById("logonav");
 window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 0);
   if (window.scrollY > 0) {
-    img.src = "../public/SVG/logo-color.svg";
+    img.src = "../../public/SVG/logo-color.svg";
   } else {
-    img.src = "../public/SVG/LOGO BLANCO.svg";
+    img.src = "../../public/SVG/LOGO BLANCO.svg";
   }
 });
 
@@ -24,7 +24,7 @@ ischecked.onclick = function () {
   if (ischecked.checked == true) {
     body.style.overflowY = "hidden";
     header.classList.remove("sticky");
-    img.src = "../public/SVG/LOGO BLANCO.svg";
+    img.src = "../../public/SVG/LOGO BLANCO.svg";
     tienda.style.backgroundColor = "var(--morado)";
     tienda1.style.display = "none";
     menu.style.display = "none";
@@ -44,7 +44,7 @@ ischecked.onclick = function () {
     close.style.display = "none";
     oscuro.style.display = "none";
     if (window.scrollY > 0) {
-      img.src = "../public/SVG/logo-color.svg";
+      img.src = "../../public/SVG/logo-color.svg";
     }
   }
 };
