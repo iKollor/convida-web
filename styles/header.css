@@ -1,7 +1,7 @@
 @import url(global.css);
 header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   z-index: 10000;
@@ -21,6 +21,8 @@ header {
 .sticky nav {
   transition: 0.2s;
   height: 80px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .sticky nav ul li {
   transition: 0.2s;
@@ -59,6 +61,8 @@ nav {
   display: inline-flex;
   transition: 0.2s;
   align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .logo {
   transition: 0.2s;
