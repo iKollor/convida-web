@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html id="html" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,7 +24,7 @@
         });
       });
     </script>
-    <main>
+    <main id="main">
       <div class="portada">
         <video
           src="public/videos/bg.mp4"
@@ -36,7 +36,7 @@
           loop
         ></video>
       </div>
-      <section class="section1">
+      <section id="sct1" class="section1">
         <div class="txt">
           <h1 class="cooperacion">Cooperación</h1>
           <h1 class="integracion">Integración</h1>
@@ -73,10 +73,10 @@
       <!--DIVISOR-->
       <div class="container">
         <section
+          id="ie"
           class="section2"
           data-aos="fade-left"
-          data-aos-delay="150"
-          data-aos-offset="200"
+          data-aos-delay="80"
         >
           <div class="der">
             <h1>Impulsamos Empredimientos</h1>
@@ -90,10 +90,10 @@
           </div>
         </section>
         <section
+          id="gv"
           class="section3"
           data-aos="fade-right"
-          data-aos-delay="150"
-          data-aos-offset="200"
+          data-aos-delay="80"
         >
           <div class="der">
             <img src="/public/SVG/Diversity _Monochromatic.svg" alt="" />
@@ -101,18 +101,18 @@
           <div class="izq">
             <h1>Generamos Vínculos</h1>
             <p>
-              Con comunidades venezolanas residentes en el Ecuador apoyando,
-              mediante la producción y el comercio de productos elaborados por
-              manos de este colectivo, y de productos manufacturados por
-              empresas nacionales.
+              Generamos vínculos con comunidades venezolanas residentes en el
+              Ecuador apoyando, mediante la producción y el comercio de
+              productos elaborados por manos de este colectivo, y de productos
+              manufacturados por empresas nacionales.
             </p>
           </div>
         </section>
         <section
+          id="mh"
           class="section2"
           data-aos="fade-left"
-          data-aos-delay="150"
-          data-aos-offset="200"
+          data-aos-delay="80"
         >
           <div class="der">
             <h1>Movilidad Humana</h1>
@@ -127,10 +127,10 @@
           </div>
         </section>
         <section
+          id="eps"
           class="section3"
           data-aos="fade-right"
-          data-aos-delay="150"
-          data-aos-offset="200"
+          data-aos-delay="80"
         >
           <div class="der">
             <img src="/public/SVG/Problem Solving_Monochromatic.svg" alt="" />
@@ -147,11 +147,31 @@
           </div>
         </section>
       </div>
+      <div class="scrollnow">
+        <a href="#ie" id="arrow">
+          <i id="arrowicon" class="fas fa-angle-double-down"></i>
+        </a>
+      </div>
     </main>
     <div id="footer"></div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        startEvent: "load",
+        offset: jQuery(window).height() * 0.2,
+        delay: 100,
+        easing: "ease-out-in",
+        anchorPlacement: "left-center",
+      });
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+        AOS.refresh();
+      } else {
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+          AOS.refresh();
+        };
+      }
     </script>
   </body>
 </html>
