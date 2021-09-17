@@ -61,45 +61,10 @@ ischecked.onclick = function () {
     }
   }
 };
-const waypoints = [
-  {
-    id: "ie",
-    handler(direction) {
-      console.log("u are in 1");
-      arrow.href = "#gv";
-      console.log("u go to: " + arrow.href);
-      arrow.style.transform = "rotate(0deg)";
-    },
-  },
-  {
-    id: "gv",
-    handler(direction) {
-      console.log("u are in 2");
-      arrow.href = "#mh";
-      console.log("u go to: " + arrow.href);
-    },
-  },
-  {
-    id: "mh",
-    handler(direction) {
-      console.log("u are in 3");
-      arrow.href = "#eps";
-      console.log("u go to: " + arrow.href);
-    },
-  },
-  {
-    id: "eps",
-    handler(direction) {
-      console.log("u are in 4");
-      arrow.style.transform = "rotate(180deg)";
-      arrow.href = "#sct1";
-      console.log("u go to: " + arrow.href);
-    },
-  },
-];
 
 arrow.onclick = function () {
   counter++;
+  arrow.style.transform = "rotate(0deg)";
   console.log("arrow=" + counter);
   if (counter == 1) {
     arrow.href = "#ie";
@@ -122,12 +87,3 @@ arrow.onclick = function () {
     counter = 0;
   }
 };
-
-waypoints.forEach(
-  ({ id, handler }) =>
-    new Waypoint({
-      element: document.getElementById(id),
-      handler,
-      offset: 0,
-    })
-);

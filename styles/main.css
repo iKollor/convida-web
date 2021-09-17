@@ -221,7 +221,7 @@ img {
 }
 .scrollnow a {
   color: white;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
 }
 
 @keyframes up-down {
