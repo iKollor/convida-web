@@ -65,6 +65,7 @@ ischecked.onclick = function () {
 arrow.onclick = function () {
   counter++;
   arrow.style.transform = "rotate(0deg)";
+  $("#arrow").removeClass("up").attr("data-content", "Deslizar Hacia arriba");
   console.log("arrow=" + counter);
   if (counter == 1) {
     arrow.href = "#ie";
@@ -78,6 +79,7 @@ arrow.onclick = function () {
   if (counter == 4) {
     arrow.href = "#eps";
     arrow.style.transform = "rotate(180deg)";
+    $("#arrow").addClass("up").attr("data-content", "Deslizar Hacia arriba");
   }
   if (counter == 5) {
     arrow.href = "#sct1";
