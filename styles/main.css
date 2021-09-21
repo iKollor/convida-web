@@ -242,6 +242,7 @@ img {
   }
   .section3 {
     flex-direction: column-reverse;
+    flex-wrap: nowrap;    
   }
   .section2,
   .section3 {
