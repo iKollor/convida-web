@@ -11,7 +11,7 @@
 .portada {
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   background: var(--celeste);
 }
@@ -130,7 +130,10 @@
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  height: 100vh;
+}
+.wave::after{
+  background-color: white;
+  height: 100px;
 }
 
 .wave svg {
