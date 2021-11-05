@@ -35,6 +35,19 @@ h1 {
   font-family: "Aristotelica-Display-Trial-Bold", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+#progressbar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #ba3ebe 0, #2893ff 100%);
+}
+
 .wave {
   position: absolute;
   bottom: 0;

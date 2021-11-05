@@ -63,7 +63,8 @@
 }
 .izq,
 .der {
-  height: 100vh;
+  margin-top: 10vh;
+  height: 50vh;
   max-width: 60%;
   display: flex;
   align-items: center;
