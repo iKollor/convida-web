@@ -9,6 +9,7 @@ var logonav = document.getElementById("logonav");
 var html = document.getElementsByTagName("html")[0];
 var arrow = document.getElementById("arrow");
 var arrowicon = document.getElementById("arrowicon");
+var offset = 200;
 
 var counter = 0;
 
@@ -17,12 +18,12 @@ window.onload = function () {
 };
 
 $(window).scroll(function () {
-  alturaTotalDoc = $(document).height()-1;
+  alturaTotalDoc = $(document).height() - 1;
   alturaScrollTop = Math.trunc($(this).scrollTop());
   alturaViewPort = $(this).height();
 
   if (alturaTotalDoc == alturaScrollTop + alturaViewPort) {
-    arrow.href = "#sct1";    
+    arrow.href = "#sct1";
     arrow.style.transform = "rotate(180deg)";
     $("#arrow").addClass("up").attr("data-content", "Deslizar Hacia arriba");
     counter = -1;
@@ -37,6 +38,11 @@ window.addEventListener("scroll", function () {
   } else {
     img.src = "../../public/SVG/LOGO BLANCO.svg";
     arrow.style.color = "white";
+  }
+  if (window.scrollY == 0) {
+    arrow.href = "#ie";
+    arrow.style.transform = "rotate(0deg)";
+    $("#arrow").removeClass("up").attr("data-content", "Deslizar Hacia arriba");
   }
 });
 
@@ -69,7 +75,7 @@ ischecked.onclick = function () {
     menu.style.display = "";
     close.style.display = "none";
     oscuro.style.display = "none";
-    if (window.scrollY > 0) {
+    if (window.scrollY > 1) {
       img.src = "../../public/SVG/logo-color.svg";
     }
   }
@@ -102,3 +108,29 @@ arrow.onclick = function () {
     counter = 0;
   }
 };
+// detect when element gets visible on scroll
+window.addEventListener("scroll", detect_visibility);
+
+// detect when screen opens for first time
+detect_visibility();
+
+function detect_visibility() {
+  var element = document.getElementById("footer");
+
+  var top_of_element = element.offsetTop;
+  var bottom_of_element =
+    element.offsetTop + element.offsetHeight + element.style.marginTop;
+  var bottom_of_screen = window.scrollY + window.innerHeight;
+  var top_of_screen = window.scrollY;
+
+  if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
+    // Element is visible write your codes here
+    // You can add animation or other codes here
+    arrow.href = "#sct1";
+    arrow.style.transform = "rotate(180deg)";
+    $("#arrow").addClass("up").attr("data-content", "Deslizar Hacia arriba");
+    counter = -1;
+  } else {
+    // the element is not visible, do something else
+  }
+}
