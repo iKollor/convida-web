@@ -1,0 +1,21 @@
+{
+  "name": "convida-web",
+  "version": "1.0.0",
+  "description": "Convida website using html, css, js",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKollor/convida-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iKollor/convida-web/issues"
+  },
+  "homepage": "https://github.com/iKollor/convida-web#readme"
+}
