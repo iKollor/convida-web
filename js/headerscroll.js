@@ -16,6 +16,19 @@ window.onload = function () {
   console.log(counter);
 };
 
+$(window).scroll(function () {
+  alturaTotalDoc = $(document).height()-1;
+  alturaScrollTop = Math.trunc($(this).scrollTop());
+  alturaViewPort = $(this).height();
+
+  if (alturaTotalDoc == alturaScrollTop + alturaViewPort) {
+    arrow.href = "#sct1";    
+    arrow.style.transform = "rotate(180deg)";
+    $("#arrow").addClass("up").attr("data-content", "Deslizar Hacia arriba");
+    counter = -1;
+  }
+});
+
 window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 0);
   if (window.scrollY > 0) {
