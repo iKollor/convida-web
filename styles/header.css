@@ -169,7 +169,16 @@ nav ul li a:not(.tienda):hover::after {
 #check {
   display: none;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1000px) {
+  #logo{
+    width: 30vw;
+  }
+  .tienda {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 1280px) {
   .sticky {
     height: 12vh;
     align-items: center;
@@ -183,7 +192,7 @@ nav ul li a:not(.tienda):hover::after {
     margin-right: 20vw;
   }
   .logo {
-    width: 30vw;
+    width: 20vw;
   }
 
   li {
@@ -232,10 +241,9 @@ nav ul li a:not(.tienda):hover::after {
   }
   .sticky nav ul li {
     text-align: center;
-    line-height: 15vh;
   }
   .tienda {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   nav ul li a {
