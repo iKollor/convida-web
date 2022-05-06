@@ -72,21 +72,21 @@
   background-size: 105%;
   background-position-x: -2vw;
 }
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .section1 {
-    padding-top: 10vw;
+    padding-top: 15vw;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
   }
   .shape {
-    width: 65vw;
-    height: 55vw;
+    width: 60vw;
+    height: 50vw;
     margin-left: 0;
   }
   .txt {
-    font-size: 8.5vw;
+    font-size: 8vw;
   }
   .shape:hover {
     background-position-x: -3vw;
@@ -242,7 +242,7 @@ img {
   }
   .section3 {
     flex-direction: column-reverse;
-    flex-wrap: nowrap;    
+    flex-wrap: nowrap;
   }
   .section2,
   .section3 {

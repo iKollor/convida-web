@@ -58,7 +58,7 @@
               <h1>Misión</h1>
               <h3>“Debes hacer las cosas que crees que no puedes hacer.”</h3>
               <h2>-Eleanor Roosevelt</h2>
-              <p>
+              <p class="text">
                 Somos una asociación dedicada a respaldar emprendimientos
                 basados en la economía popular y solidaria, nuestra meta es
                 ofrecer y respaldar a los distintos emprendimientos y productos
@@ -72,7 +72,7 @@
               <h1>Visión</h1>
               <h3>“El fracaso es éxito si aprendemos de él.”</h3>
               <h2>-Malcolm Forbes</h2>
-              <p>
+              <p class="text">
                 Extender redes hermanas y fraternas entre los distintos grupos
                 de individuos hispano migrantes dando a conocer productos de
                 calidad y de accesibilidad a los consumidores proyectándonos
@@ -82,6 +82,122 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="section3">
+        <div class="img-slider">
+          <div class="slide active">
+            <img src="../../public/img/img 2.jpg" alt="" />
+            <div class="info">
+              <h2>Slide 01</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="../../public/img/img 1.jpg" alt="" />
+            <div class="info">
+              <h2>Slide 02</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="../../public/img/img 5.jpg" alt="" />
+            <div class="info">
+              <h2>Slide 03</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="../../public/img/img 11.jpg" alt="" />
+            <div class="info">
+              <h2>Slide 04</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="../../public/img/img 5.jpeg" alt="" />
+            <div class="info">
+              <h2>Slide 05</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var slides = document.querySelectorAll(".slide");
+          var btns = document.querySelectorAll(".btn");
+          let currentSlide = 1;
+
+          // Javascript for image slider manual navigation
+          var manualNav = function (manual) {
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+
+              btns.forEach((btn) => {
+                btn.classList.remove("active");
+              });
+            });
+
+            slides[manual].classList.add("active");
+            btns[manual].classList.add("active");
+          };
+
+          btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+              manualNav(i);
+              currentSlide = i;
+            });
+          });
+
+          // Javascript for image slider autoplay navigation
+          var repeat = function (activeClass) {
+            let active = document.getElementsByClassName("active");
+            let i = 1;
+
+            var repeater = () => {
+              setTimeout(function () {
+                [...active].forEach((activeSlide) => {
+                  activeSlide.classList.remove("active");
+                });
+
+                slides[i].classList.add("active");
+                btns[i].classList.add("active");
+                i++;
+
+                if (slides.length == i) {
+                  i = 0;
+                }
+                if (i >= slides.length) {
+                  return;
+                }
+                repeater();
+              }, 5000);
+            };
+            repeater();
+          };
+          repeat();
+        </script>
       </section>
     </main>
     <div id="footer"></div>
