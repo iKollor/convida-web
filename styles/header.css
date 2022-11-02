@@ -170,7 +170,7 @@ nav ul li a:not(.tienda):hover::after {
   display: none;
 }
 @media (max-width: 1000px) {
-  #logo{
+  #logo {
     width: 30vw;
   }
   .tienda {
